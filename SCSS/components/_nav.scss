@@ -1,0 +1,32 @@
+/*Barra de navegación,*/
+.container-fluid {
+    background-color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    width: 100%;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar ul li {
+    margin: 5px;
+    margin-top: auto;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /*Animación del navbar*/
+  .navbar ul li a:hover {
+    font-size: 18px;
+    transition: 0, 4s;
+    background-color: rgba(82, 238, 160, 0.72);
+  }
+  

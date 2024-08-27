@@ -1,0 +1,24 @@
+/*En todas las páginas*/
+footer {
+    background-color: white;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 300px;
+    margin: 10px;
+    margin-bottom: 0px;
+  }
+  
+  /*redes*/
+  div.redes {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+  }
+  
+  /*# sourceMappingURL=styles.css.map */
+  
