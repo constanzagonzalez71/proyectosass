@@ -14,10 +14,11 @@
   
   }
   .titulop {
+      display: flex;
       height: 5vh;
       color: rgb(101, 114, 52);
       align-items: center;
-      flex-direction: column;
+      flex-direction: center;
       justify-content: center;
       font-family: Georgia,"Times New Roman", Times, serif;
       margin: 5%;
@@ -60,7 +61,10 @@
     border: 1px solid #ccc;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-  
+  .comentarios {
+    height: 700px;
+    padding: 20 px;
+  }
   .input, button {
     margin-bottom: 10px;
     padding: 10px;
