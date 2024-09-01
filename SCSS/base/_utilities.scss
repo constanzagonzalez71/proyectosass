@@ -1,19 +1,4 @@
-$temporada: "verano";
 
-.cambio {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    display: block;
-    margin: 5%; 
-
-    @if $temporada == "primavera" {
-        background-image: url("./multimedia/imagenbaner2.jpg");
-    }
-    @else if $temporada == "verano" {
-        background-image: url("./multimedia/verano2025.gif");
-    }
-}
 //anidación 
 .navbar {
     display: flex;
@@ -41,4 +26,10 @@ $temporada: "verano";
     }
   }
 
+  
+  @mixin hover-effect {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+  }  
+  
   

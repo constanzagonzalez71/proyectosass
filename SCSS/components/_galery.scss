@@ -11,26 +11,7 @@
     width: 90%;
   }
   
-  @media (min-width: 100px) {
-    .grid-container {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  @media (min-width: 520px) {
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 728px) {
-    .grid-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media (min-width: 1024px) {
-    .grid-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+  
   .grid-prices {
     justify-content: center;
     display: grid;
@@ -51,8 +32,7 @@
   }
   
   .imgproduct:hover {
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3%);
+    @include hover-effect;
   }
   
   .grid-item {
@@ -63,21 +43,38 @@
   /*Página 3 "Quiénes somos"Información de la empresa*/
   .grid-tit1 {
     display: grid;
-    color: rgb(101, 114, 52);
+    color: $colorempresa;
     justify-content: center;
     font-size: calc(1.525rem + 3.3vw);
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family:$titulos;
     margin: 3%;
+    @media (max-width: 768px) {
+      font-size: calc(1.2rem + 2.5vw); // Ajusta el tamaño del texto para pantallas más pequeñas
+      margin: 5%; // Ajusta el margen para pantallas más pequeñas
+    }
   
+    @media (max-width: 480px) {
+    font-size: calc(1rem + 2vw); // Ajusta aún más el tamaño del texto para pantallas muy pequeñas
+    margin: 10%; // Ajusta el margen para pantallas muy pequeñas
   }
+}
+
   
   .grid-tit2 {
-    display: grid;
     justify-content: center;
     margin: O;
-    color: rgb(101, 114, 52);
-  
+    color: $colorempresa;
+    @media (max-width: 768px) {
+      font-size: calc(0.9rem + 2vw); // Ajusta el tamaño del texto para pantallas más pequeñas
+    }
+    
+    @media (max-width: 480px) {
+      font-size: calc(0.8rem + 1.5vw); // Ajusta aún más el tamaño del texto para pantallas muy pequeñas
+    }
   }
+    
+  
+
   
   .contenedor {
     display: flex;

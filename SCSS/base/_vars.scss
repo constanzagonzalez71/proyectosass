@@ -1,0 +1,19 @@
+$colorempresa : rgb(101, 114, 52);
+$titulos:Verdana, Geneva, Tahoma, sans-serif;
+
+
+$temporada: "verano"; // Solo un valor puede ser asignado a la vez: "verano" o "primavera"
+
+// Definir las variables de imagen para cada temporada
+$imagen-verano: url('../multimedia/temp2025.gif');
+$imagen-primavera: url('../multimedia/presentacion.gif');
+
+// Variable que se actualizará según la temporada
+$imagen-banner: null;
+
+// Condicionales para cambiar la imagen según la temporada
+@if $temporada == "verano" {
+    $imagen-banner: $imagen-verano;
+} @else if $temporada == "primavera" {
+    $imagen-banner: $imagen-primavera;
+} 

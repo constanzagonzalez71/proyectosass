@@ -4,12 +4,13 @@
     color: rgb(101, 114, 52);
     margin-top: 4%;
     align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: $titulos;
     text-align: center;
     font-size: calc(1.525rem + 3.3vw);
     flex-wrap: wrap;
-  }
   
+}
+
   .header {
     background-color:white;
     border: 1px solid white;
@@ -29,27 +30,15 @@
     justify-content: space-around;
   }
   
-  /* Media Query para pantallas más grandes */
-  @media (min-width: 768px) {
-    .descripcion {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-    }
-    .descripcion .img-1 {
-      margin-right: 10px;
-    }
-    .descripcion h4 {
-      font-size: 1.2rem;
-    }
-  }
+ 
+  
   .image-title-row {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
   }
-  
+  /*Anidación*/
   .image-title-row img {
     width: 100px; /* Tamaño pequeño para la imagen */
     height: auto;
