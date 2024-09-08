@@ -55,6 +55,38 @@
   color: white;
   text-decoration: none;
 }
+.nombre-empresa {
+  display: flex;
+  justify-content: center;
+  color: rgb(101, 114, 52);
+  margin-top: 4%;
+  align-items: center;
+  font-family: rgb(101, 114, 52) ;
+  text-align: center;
+  font-size: calc(1.525rem + 3.3vw);
+  flex-wrap: wrap;
+
+}
+
+.header {
+  background-color:white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+}
+.cuerpo {
+  padding: 10px;
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  justify-content: space-around;
+}
+
 
 /*Animación del navbar*/
 .navbar ul li a:hover {
@@ -108,38 +140,6 @@
 .imagenbaner2 {
   animation-delay: 0.5s; /* Retrasa la animación para que inicie después de .imagenbaner1 */
 }
-.nombre-empresa {
-  display: flex;
-  justify-content: center;
-  color: rgb(101, 114, 52);
-  margin-top: 4%;
-  align-items: center;
-  font-family:  rgb(101, 114, 52);
-  text-align: center;
-  font-size: calc(1.525rem + 3.3vw);
-  flex-wrap: wrap;
-
-}
-
-.header {
-  background-color:white;
-  border: 1px solid white;
-  display: flex;
-  justify-content: space-around;
-}
-.cuerpo {
-  padding: 10px;
-}
-
-.descripcion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  justify-content: space-around;
-}
-
 
 /* Pagina2"Productos" Galería de fotos y precios*/
 /*Página 2 Galería de productos y precios*/
@@ -206,8 +206,9 @@
 }
 
 .grid-tit2 {
+  display: grid;
   justify-content: center;
-  margin: O;
+  margin: 4%;
   color: rgb(101, 114, 52);
 }
 @media (max-width: 768px) {
@@ -316,8 +317,9 @@
 }
 
 .grid-tit2 {
+  display: grid;
   justify-content: center;
-  margin: O;
+  margin: 4%;
   color: rgb(101, 114, 52);
 }
 @media (max-width: 768px) {
@@ -389,7 +391,8 @@ footer .redes a:hover {
 }
 
 
-/*Pagina 5*/
+/*Pagina 5
+  */
 .encabezado {
   display: flex;
   flex-direction: column;
@@ -421,17 +424,48 @@ footer .redes a:hover {
   font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
 }
 
-.comentarios {
-  height: 150px;
-  padding: 20 px;
+/* Media query para pantallas medianas, como tablets */
+@media (max-width: 768px) {
+  .encabezado {
+    padding: 15px; /* Reducir el padding en pantallas medianas */
+  }
 }
-
+/* Media query para pantallas pequeñas, como móviles */
+@media (max-width: 480px) {
+  .encabezado {
+    padding: 10px; /* Reducir el padding en pantallas pequeñas */
+    flex-direction: column; /* Mantener la columna en dispositivos móviles */
+    width: 100%; /* Asegurarse de que el encabezado use todo el ancho de la pantalla */
+  }
+}
+/* Media query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .tituloc {
+    font-size: calc(1.4rem + 2.5vw); /* Ajusta el tamaño de la fuente en pantallas medianas */
+    margin: 4%; /* Reduce el margen en pantallas medianas */
+  }
+  .titulop {
+    font-size: clamp(1.4rem, 2vw + 0.8rem, 2.2rem); /* Ajusta la fuente */
+    margin: 4%; /* Reduce el margen en pantallas medianas */
+  }
+}
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .tituloc {
+    font-size: calc(1.2rem + 2vw);
+    margin: 3%;
+  }
+  .titulop {
+    font-size: clamp(1.2rem, 2vw + 0.5rem, 2rem); /* Reduce la fuente en móviles */
+    margin: 3%; /* Reduce el margen en móviles */
+  }
+}
 .datos {
   display: flex;
   background-color: white;
   flex-direction: row;
   justify-content: space-around;
-  height: auto;
+  height: 400pxpx;
   margin: 5%;
   gap: 2px;
   padding-top: 40px;
@@ -441,13 +475,31 @@ form {
   display: flex;
   flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 20px;
-  height: 400px;
+  padding: 40px;
+  height: 700px;
   background-color: white;
-  width: 300px;
-  border-radius: 5px;
+  width: 350px;
+  border-radius: 20px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+label {
+  color: #283629;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  padding: 17px 25px;
+  border-radius: 25 px;
+  margin-bottom: 20px;
+  background-color: #EDFFF0;
+  border-radius: 2px solid #F0FAF1;
+  color: #283629;
+  outline: none;
 }
 
 .redes1 {
@@ -462,29 +514,73 @@ form {
   margin: 0;
 }
 
-.input, button {
-  margin-bottom: 10px;
-  padding: 10px;
+input, button {
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px;
   font-size: 16 px;
+  align-self: center;
 }
 
 .button {
+  padding: 10px;
   cursor: pointer;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
-  align-items: center;
+  align-content: center;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 520px) {
-  .encabezado {
+  .datos {
     flex-direction: column;
   }
 }
-@media (max-width: 520px) {
-  .datos {
-    flex-direction: column;
+.button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 80%; /* Ajusta el ancho al 80% de la pantalla en dispositivos medianos */
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    padding: 20px; /* Reduce el padding */
+  }
+  input, textarea {
+    padding: 15px; /* Ajusta el padding */
+    font-size: 14px; /* Reduce el tamaño de la fuente en dispositivos pequeños */
+  }
+  .button {
+    padding: 15px;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+  }
+}
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+  form {
+    padding: 10px; /* Reduce el padding en móviles */
+    max-width: 100%; /* Se asegura de que el formulario no sea más grande que la pantalla */
+  }
+  input, textarea {
+    width: 100%; /* Asegura que todo ocupe el ancho completo del contenedor */
+    font-size: 16px; /* Aumenta ligeramente el tamaño de la fuente para móviles */
+  }
+  textarea {
+    height: 100px; /* Aumenta el alto del área de comentarios en pantallas pequeñas */
+  }
+}
+/* Media query para pantallas medianas */
+@media (max-width: 768px) {
+  form {
+    max-width: 100%; /* Se asegura de que no sobrepase el contenedor */
+  }
+  input, textarea {
+    font-size: 15px;
+  }
+  textarea {
+    height: 120px; /* Ajuste del área de comentarios */
   }
 }
 .contenedor-cards {
@@ -537,7 +633,7 @@ form {
   padding: 0;
 }
 
-div.direction {
+.maps.direction {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
